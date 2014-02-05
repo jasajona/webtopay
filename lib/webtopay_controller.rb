@@ -1,7 +1,7 @@
 module WebToPayController  
   module ClassMethods
     def webtopay(*actions)
-      before_filter :webtopay_check
+      before_filter :webtopay_check, :only => actions
 
       attr_reader :webtopay_response
     end
